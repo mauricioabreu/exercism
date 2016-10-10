@@ -1,5 +1,6 @@
 module Pangram
   def self.pangram?(statement)
-    ('a'..'z').all? { |l| statement.downcase.includes?(l) }
+    downcase_statement = statement.downcase
+    ('a'..'z').all? { |l| downcase_statement.includes?(l) }
   end
 end
